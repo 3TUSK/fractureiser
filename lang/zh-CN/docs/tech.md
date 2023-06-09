@@ -125,9 +125,9 @@ SHA-1：`dc43c4685c3f47808ac207d1667cc1eb915b2d82`
 sha-1：`c2d0c87a1fe99e3c44a52c48d8bcf65a67b3e9a5`
 sha-1：`e299bf5a025f5c3fff45d017c3c2f467fa599915`
 
-`client.jar` 内含经过混淆的复杂代码，除普通 Java 程序外还有本地代码（native code）。
+`client.jar` 内含经过混淆的复杂代码，除普通 Java 程序外还有原生代码（native code）。
 
-其中，包含本地代码的文件叫 `hook.dll`，反编译结果可在此查阅：https://gist.githubusercontent.com/NotNite/79ab1e5501e1ef109e8030059356b1b8/raw/c2102bf5ff74275ac44c2200d5121bfff652fd49/hook.dll.c
+其中，包含原生代码的文件叫 `hook.dll`，反编译结果可在此查阅：https://gist.githubusercontent.com/NotNite/79ab1e5501e1ef109e8030059356b1b8/raw/c2102bf5ff74275ac44c2200d5121bfff652fd49/hook.dll.c
 
 其内含两个方法，方法名显示这两个方法均可通过 JNI 调用，因此这两个方法应是供 Java 代码调用的：
 * `__int64 __fastcall Java_dev_neko_nekoclient_api_windows_WindowsHook_retrieveClipboardFiles(__int64 a1);`
